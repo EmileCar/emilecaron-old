@@ -1,0 +1,128 @@
+/*   INDEX CSS: Algemene styling voor hele site (vooral variabelen en declaraties van fonts)   */
+
+@font-face {
+	font-family: Poppins;
+	font-weight: normal;
+  font-style: normal;
+	src: url('assets/fonts/poppins/PoppinsRegular.otf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: bold;
+  font-style: normal;
+  src: url('assets/fonts/poppins/PoppinsBold.otf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 300;
+  font-style: normal;
+  src: url('assets/fonts/poppins/PoppinsLight.otf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: normal;
+  src: url('assets/fonts/poppins/PoppinsSemibold.otf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: normal;
+  src: url('assets/fonts/poppins/PoppinsExtrabold.otf');
+}
+
+@font-face {
+  font-family: Poppins;
+  font-weight: 800;
+  font-style: normal;
+  src: url('assets/fonts/poppins/PoppinsBlack.otf');
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+	box-sizing: inherit;
+}
+
+:root {
+	--s-99: .1rem;
+	--s-2: .2rem;
+	--s-1: .5rem;
+	--s0: 1rem;
+	--s1: 1.5rem;
+	--s2: 2rem;
+	--s3: 3rem;
+
+	--main-color: #5EACF4;
+  --white-color: #FFFFFF;
+  --dark-color: #333333;
+  --grey-color: #D5D5D5;
+	--error-color: red;
+  --site-max-width: 80rem;
+}
+
+#root {
+  line-height: 1.2;
+  font-size: 18px;
+  font-family: 'Poppins', 'Helvetica', sans-serif;
+  font-weight: 300;
+  color: var(--dark-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/*   GENERAL STYLING   */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.elevation{
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+
+.elevation-strong{
+ box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.5)
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.layered-grid {
+	display: grid;
+	place-items: center;
+}
+
+.layered-grid>* {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.preload {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+}
