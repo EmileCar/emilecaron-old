@@ -7,10 +7,6 @@ import Button from "../buttons/Button";
 const Hero = () => {
     const { img, title, description, buttons } = useContext(ActivityContext);
 
-    useEffect(() => {
-        console.log(description);
-    }, [description]);
-
     return (
         <div className="hero">
             <div className="hero-wrapper">

@@ -2,14 +2,25 @@ import "./header.css";
 import React from 'react';
 import { useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import { SelectButton } from 'primereact/selectbutton';
+import { changeLanguage } from "i18next";
 
 const Header = ({ title }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
+  const { i18n } = useTranslation("global");
+  const [languages, setLanguages] = useState(["ned", "eng"]);
 
   useEffect(() => {
     setIsNavOpen(false);
   }, [location]);
+
+  
+  const handleChangeLanguage = (language) => {
+    console.log(language);
+    i18n.changeLanguage(language);
+  };
 
   const handleClickNavToggle = () => {
     console.log(isNavOpen)
@@ -45,6 +56,7 @@ const Header = ({ title }) => {
                 Contact
               </Link>
             </li>
+            <SelectButton value={i18n.language} onChange={(e) => changeLanguage(e.value)} options={languages} />
           </ul>
         </nav>
         <label htmlFor="nav-toggle" className="toggle-button" onClick={handleClickNavToggle}>
