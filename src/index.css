@@ -63,10 +63,10 @@ html {
 	--s2: 2rem;
 	--s3: 3rem;
 
-	--main-color: #5EACF4;
+	--main-color: #007CED;
   --white-color: #FFFFFF;
   --dark-color: #333333;
-  --grey-color: #D5D5D5;
+  --grey-color: #ADADAD;
 	--error-color: red;
   --site-max-width: 80rem;
 }

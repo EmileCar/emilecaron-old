@@ -1,13 +1,25 @@
 import React, { useContext } from "react";
 import "./Home.css";
-import { ActivityContext, ActivityProvider } from "../contexts/ActivityContext";
+import { ActivityContext } from "../contexts/ActivityContext";
+import Hero from "../components/hero/Hero";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
-    const { activity } = useContext(ActivityContext);
+    const { i18n } = useTranslation("global");
+    const { toggleActivity } = useContext(ActivityContext);
+
+    const handleChangeLanguage = (language) => {
+        console.log(language);
+        i18n.changeLanguage(language);
+    };
 
     return (
         <div className="page">
-            <h1>Home Page - {activity}</h1>
+            <Hero />
+            <h1>Home Page</h1>
+            <button onClick={() => toggleActivity()}>click</button>
+            <button onClick={() => handleChangeLanguage("ned")}>Ned</button>
+            <button onClick={() => handleChangeLanguage("eng")}>Eng</button>
         </div>
     );
 };

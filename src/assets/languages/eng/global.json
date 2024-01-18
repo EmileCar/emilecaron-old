@@ -1,3 +1,16 @@
 {
-    
+    "header": {
+        "home": "Home",
+        "about": "About me"
+    },
+    "hero": {
+        "webDev": {
+            "title": "Web Developer",
+            "description": "I am a 21 year old student with a great interest in computer science and driven to further build my skills and knowledge in the world of software development. I am convinced that I can make a valuable contribution to any team or project through my passion for programming and willingness to learn and grow."
+        },
+        "pianist": {
+            "title": "Pianist",
+            "description": "Just your local pianist"
+        }
+    }
 }
