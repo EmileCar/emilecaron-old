@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import emileCaronImage from '../assets/img/emilecaron_picture.jpg';
+import emileCaronPiano from '../assets/img/emilecaron_piano.jpg';
 import { useTranslation } from 'react-i18next';
 
 export const ActivityContext = createContext();
@@ -28,7 +29,7 @@ export const ActivityProvider = ({ children }) => {
     
     const pianoData = {
         id: 'piano',
-        img: emileCaronImage,
+        img: emileCaronPiano,
         title: "hero.pianist.title",
         description:"hero.pianist.description",
         buttons: [
@@ -51,31 +52,48 @@ export const ActivityProvider = ({ children }) => {
     const [title, setTitle] = useState(null);
     const [description, setDescription] = useState(null);
     const [buttons, setButtons] = useState(null);
+    const [activityState, setActivityState] = useState("idle");
+
+    useEffect(() => {
+        if(activityState === "fadeOut"){
+            setTimeout(() => {
+                console.log(activity)
+                setImg(activity.img);
+                setTitle(t(activity.title));
+                // replace $$AGE$$ with age
+                const description = t(activity.description);
+                const age = new Date().getFullYear() - 2002;
+                const ageRegex = /\$\$AGE\$\$/g;
+                setDescription(description.replace(ageRegex, age));
+                setButtons(activity.buttons);
+                setActivityState("fadeIn");
+            } , 510);
+        }
+    }, [activityState]);
 
     useEffect(() => {
         setImg(activity.img);
         setTitle(t(activity.title));
-        setDescription(t(activity.description));
-        setButtons(activity.buttons);
-    }, [activity]);
-
-    useEffect(() => {
-        setImg(activity.img);
-        setTitle(t(activity.title));
-        setDescription(t(activity.description));
+        // replace $$AGE$$ with age
+        const description = t(activity.description);
+        const age = new Date().getFullYear() - 2002;
+        const ageRegex = /\$\$AGE\$\$/g;
+        setDescription(description.replace(ageRegex, age));
         setButtons(activity.buttons);
     }, [t]);
 
     const toggleActivity = () => {
         if (activity.id === webDevData.id) {
             setActivity(pianoData);
+            setActivityState("fadeOut");
         } else {
             setActivity(webDevData);
+            setActivityState("fadeOut");
         }
     }
 
     return (
-        <ActivityContext.Provider value={{ toggleActivity, img, title, description, buttons }}>
+        <ActivityContext.Provider value={{ toggleActivity, img, title, description, buttons, activityState }}>
             {children}
         </ActivityContext.Provider>
     );

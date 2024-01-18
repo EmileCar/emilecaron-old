@@ -6,7 +6,7 @@
     "hero": {
         "webDev": {
             "title": "Web Developer",
-            "description": "Ik ben een 21-jarige student met veel interesse in informatica en gedreven om mijn vaardigheden en kennis verder op te bouwen in de wereld van software-ontwikkeling. Ik ben ervan overtuigd dat ik een waardevolle bijdrage kan leveren aan elk team of project door mijn passie voor programmeren en bereidheid om te leren en groeien."
+            "description": "Ik ben een $$AGE$$-jarige student met veel interesse in informatica en gedreven om mijn vaardigheden en kennis verder op te bouwen in de wereld van software-ontwikkeling. Ik ben ervan overtuigd dat ik een waardevolle bijdrage kan leveren aan elk team of project door mijn passie voor programmeren en bereidheid om te leren en groeien."
         },
         "pianist": {
             "title": "Pianist",

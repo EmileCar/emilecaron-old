@@ -3,6 +3,8 @@
 	width: 100vw;
 	z-index: 40;
 	transition: opacity 0.5s ease-in-out;
+	background-color: var(--white-color);
+	box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
 .header__content {
@@ -138,13 +140,10 @@
 	z-index: 100;
 }
 
-/* .nav-toggle:checked ~ .navbar{
-	transform: scale(1, 1);
-} */
-.nav-toggle:checked ~ .toggle-button{
-	/* transform: rotate(90deg); */
-}
 @media screen and (min-width: 55rem){
+	.header{
+		box-shadow: none;
+	}
 	.navbar{
 		position: relative;
 		height: auto;
