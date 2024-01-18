@@ -1,26 +1,22 @@
 import "./header.css";
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { SelectButton } from 'primereact/selectbutton';
 import { changeLanguage } from "i18next";
+import { ActivityContext } from "../../contexts/ActivityContext";
 
 const Header = ({ title }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
   const { i18n } = useTranslation("global");
   const [languages, setLanguages] = useState(["ned", "eng"]);
+  const { icon, activityState, toggleActivity } = useContext(ActivityContext);
 
   useEffect(() => {
     setIsNavOpen(false);
   }, [location]);
-
-  
-  const handleChangeLanguage = (language) => {
-    console.log(language);
-    i18n.changeLanguage(language);
-  };
 
   const handleClickNavToggle = () => {
     console.log(isNavOpen)
@@ -30,9 +26,15 @@ const Header = ({ title }) => {
   return (
     <header className="header">
       <div className={`header__content preload ${isNavOpen && 'open'}`}>
-        <Link to="/" className="header__logo--container layered-grid">
-          <h1>Emile Caron</h1>
-        </Link>
+        <div className="header__logo--container">
+          <div onClick={toggleActivity} className={`activity__container fade-img ${activityState ? activityState : ""}`}>
+            {icon}
+          </div>
+          <Link to="/" className="layered-grid">
+            <h1>Emile Caron</h1>
+          </Link>
+        </div>
+        
         <input type="checkbox" id="nav-toggle" className="nav-toggle" />
         <nav className={`navbar ${isNavOpen ? 'navOpen' : ''}`}>
           <ul className="menu__items">

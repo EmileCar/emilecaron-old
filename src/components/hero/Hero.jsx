@@ -11,7 +11,7 @@ const Hero = () => {
     <div className={`hero`}>
       <div className={`hero-wrapper`}>
         <div className={`hero-wrapper__image`} >
-          <img src={img} alt={"Emile Caron " + title} className={`hero-wrapper__image-img ${activityState ? activityState : ""}`} />
+          <img src={img} alt={"Emile Caron " + title} className={`fade-img ${activityState ? activityState : ""}`} />
         </div>
         <div className={`hero-wrapper__content`}>
           <h2 className={`hero-wrapper__content--title ${activityState ? activityState : ""}`}>{title}</h2>

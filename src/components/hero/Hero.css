@@ -21,6 +21,7 @@
     border: 0.8rem solid var(--white-color);
     box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    z-index: 100;
 }
 
 .hero-wrapper__image img{
@@ -131,11 +132,11 @@
     animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-.fadeOut.hero-wrapper__image-img{
+.fadeOut.fade-img{
     animation: fadeOutImg 0.5s ease-in-out forwards;
 }
 
-.fadeIn.hero-wrapper__image-img{
+.fadeIn.fade-img{
     animation: fadeInImg 0.5s ease-in-out forwards;
 }
 

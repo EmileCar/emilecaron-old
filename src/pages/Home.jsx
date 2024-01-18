@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Home.css";
 import { ActivityContext } from "../contexts/ActivityContext";
 import Hero from "../components/hero/Hero";
+import Projects from "../components/projects/Projects";
 
 const Home = () => {
     const { toggleActivity } = useContext(ActivityContext);
@@ -10,7 +11,7 @@ const Home = () => {
     return (
         <div className="page">
             <Hero />
-            <h1>Home Page</h1>
+            <Projects />
             <button onClick={() => toggleActivity()}>click</button>
 
         </div>

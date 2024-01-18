@@ -2,6 +2,8 @@ import React, { createContext, useEffect, useState } from 'react';
 import emileCaronImage from '../assets/img/emilecaron_picture.jpg';
 import emileCaronPiano from '../assets/img/emilecaron_piano.jpg';
 import { useTranslation } from 'react-i18next';
+import PianoIcon from '../components/custom_icons/pianoIcon';
+import WebDevIcon from '../components/custom_icons/webDevIcon';
 
 export const ActivityContext = createContext();
 
@@ -11,6 +13,7 @@ export const ActivityProvider = ({ children }) => {
     const webDevData = {
         id: 'webDev',
         img: emileCaronImage,
+        icon: WebDevIcon,
         title: "hero.webDev.title",
         description: "hero.webDev.description",
         buttons: [
@@ -30,6 +33,7 @@ export const ActivityProvider = ({ children }) => {
     const pianoData = {
         id: 'piano',
         img: emileCaronPiano,
+        icon: PianoIcon,
         title: "hero.pianist.title",
         description:"hero.pianist.description",
         buttons: [
@@ -49,6 +53,7 @@ export const ActivityProvider = ({ children }) => {
     const [activity, setActivity] = useState(webDevData);
     
     const [img, setImg] = useState(null);
+    const [icon, setIcon] = useState(null);
     const [title, setTitle] = useState(null);
     const [description, setDescription] = useState(null);
     const [buttons, setButtons] = useState(null);
@@ -59,6 +64,7 @@ export const ActivityProvider = ({ children }) => {
             setTimeout(() => {
                 console.log(activity)
                 setImg(activity.img);
+                setIcon(activity.icon);
                 setTitle(t(activity.title));
                 // replace $$AGE$$ with age
                 const description = t(activity.description);
@@ -73,6 +79,7 @@ export const ActivityProvider = ({ children }) => {
 
     useEffect(() => {
         setImg(activity.img);
+        setIcon(activity.icon);
         setTitle(t(activity.title));
         // replace $$AGE$$ with age
         const description = t(activity.description);
@@ -93,7 +100,7 @@ export const ActivityProvider = ({ children }) => {
     }
 
     return (
-        <ActivityContext.Provider value={{ toggleActivity, img, title, description, buttons, activityState }}>
+        <ActivityContext.Provider value={{ toggleActivity, img, icon, title, description, buttons, activityState }}>
             {children}
         </ActivityContext.Provider>
     );
