@@ -3,17 +3,20 @@ import "./Home.css";
 import { ActivityContext } from "../contexts/ActivityContext";
 import Hero from "../components/hero/Hero";
 import Projects from "../components/projects/Projects";
+import Skills from "../components/skills/Skills";
 
 const Home = () => {
-    const { toggleActivity } = useContext(ActivityContext);
+    const { id, toggleActivity } = useContext(ActivityContext);
 
 
     return (
         <div className="page">
             <Hero />
-            <Projects />
-            <button onClick={() => toggleActivity()}>click</button>
-
+            {
+                id === 'webDev' ? 
+                <Skills /> :
+                null
+            }
         </div>
     );
 };

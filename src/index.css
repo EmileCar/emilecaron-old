@@ -67,6 +67,7 @@ html {
   --white-color: #FFFFFF;
   --dark-color: #333333;
   --grey-color: #ADADAD;
+  --light-grey-color: rgb(229,229,229);
 	--error-color: red;
   --site-max-width: 80rem;
 }

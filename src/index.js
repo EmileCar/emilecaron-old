@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import global_ned from './assets/languages/ned/global.json';
 import global_eng from './assets/languages/eng/global.json';
+import projects_ned from './assets/languages/ned/projects.json';
+import projects_eng from './assets/languages/eng/projects.json';
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 
@@ -13,10 +15,12 @@ i18next.init({
   lng: 'ned',
   resources: {
     ned: {
-      global: global_ned
+      global: global_ned,
+      projects: projects_ned
     },
     eng: {
-      global: global_eng
+      global: global_eng,
+      projects: projects_eng
     }
   }
 });

@@ -4,6 +4,8 @@ import emileCaronPiano from '../assets/img/emilecaron_piano.jpg';
 import { useTranslation } from 'react-i18next';
 import PianoIcon from '../components/custom_icons/pianoIcon';
 import WebDevIcon from '../components/custom_icons/webDevIcon';
+import Projects from '../components/projects/Projects';
+import Skills from '../components/skills/Skills';
 
 export const ActivityContext = createContext();
 
@@ -26,6 +28,14 @@ export const ActivityProvider = ({ children }) => {
                 text: "Contact",
                 link: "/contact",
                 type: "secondary"
+            }
+        ],
+        components: [
+            {
+                name: Skills
+            },
+            {
+                name: Projects
             }
         ]
     };
@@ -100,7 +110,7 @@ export const ActivityProvider = ({ children }) => {
     }
 
     return (
-        <ActivityContext.Provider value={{ toggleActivity, img, icon, title, description, buttons, activityState }}>
+        <ActivityContext.Provider value={{ toggleActivity, id: activity.id,img, icon, title, description, buttons, activityState }}>
             {children}
         </ActivityContext.Provider>
     );
