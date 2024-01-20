@@ -1,0 +1,29 @@
+
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "project1.name",
+            "description": "project1.description",
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "githubLink": "https://github.com/your-username/project1",
+            "liveLink": "https://your-username.github.io/project1"
+        },
+        {
+            "id": 2,
+            "name": "project2.name",
+            "description": "project2.description",
+            "technologies": ["React", "Node.js", "MongoDB"],
+            "githubLink": "https://github.com/your-username/project2",
+            "liveLink": "https://your-username.github.io/project2"
+        },
+        {
+            "id": 3,
+            "name": "project3.name",
+            "description": "project3.description",
+            "technologies": ["HTML", "CSS", "JavaScript"],
+            "githubLink": "https://github.com/your-username/project1",
+            "liveLink": "https://your-username.github.io/project1"
+        }
+    ]
+}

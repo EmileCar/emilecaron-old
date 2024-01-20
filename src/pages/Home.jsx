@@ -4,6 +4,7 @@ import { ActivityContext } from "../contexts/ActivityContext";
 import Hero from "../components/hero/Hero";
 import Projects from "../components/projects/Projects";
 import Skills from "../components/skills/Skills";
+import QuickInfo from "../components/quickinfo/QuickInfo";
 
 const Home = () => {
     const { id, toggleActivity } = useContext(ActivityContext);
@@ -13,9 +14,13 @@ const Home = () => {
         <div className="page">
             <Hero />
             {
-                id === 'webDev' ? 
-                <Skills /> :
-                null
+                id === 'webDev' && 
+                <>
+                    <QuickInfo />
+                    <Skills />
+                    
+                </>
+                
             }
         </div>
     );

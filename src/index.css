@@ -120,6 +120,13 @@ strong {
 	grid-column: 1;
 }
 
+.link{
+  font-style: italic;
+  color: var(--main-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .preload {
 	-webkit-transition: none !important;
 	-moz-transition: none !important;

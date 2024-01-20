@@ -71,7 +71,6 @@ const Skills = () => {
                             <li className="skills__container__item__list__item">Git</li>
                             <li className="skills__container__item__list__item">Docker</li>
                             <li className="skills__container__item__list__item">Agile / SCRUM methode</li>
-                            
                         </ul>
                         <ul className="skills__icons">
                             <img src={gitIcon} height={iconHeight}/>

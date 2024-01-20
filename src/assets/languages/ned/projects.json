@@ -1,16 +1,27 @@
 {
-    "header": {
-        "home": "Home",
-        "about": "Over mij"
-    },
-    "hero": {
-        "webDev": {
-            "title": "Web Developer",
-            "description": "Ik ben een $$AGE$$-jarige student met veel interesse in informatica en gedreven om mijn vaardigheden en kennis verder op te bouwen in de wereld van software-ontwikkeling. Ik ben ervan overtuigd dat ik een waardevolle bijdrage kan leveren aan elk team of project door mijn passie voor programmeren en bereidheid om te leren en groeien."
+    "project1":
+        {
+            "name": "Project 1",
+            "description": "Dit is project 1"
         },
-        "pianist": {
-            "title": "Pianist",
-            "description": "Ik ben jouw pianist voor elke gelegenheid. Ik speel al 15 jaar piano en heb ervaring met het spelen van klassieke muziek, jazz, pop en filmmuziek. Ik heb ook ervaring met het begeleiden van koren en solisten. Ik ben beschikbaar voor concerten, evenementen, bruiloften, begrafenissen, ..."
+    "project2":
+        {
+            "name": "Project 2",
+            "description": "Dit is project 2"
+        },
+    "project3":
+        {
+            "name": "Project 3",
+            "description": "Dit is project 3"
+        },
+    "project4":
+        {
+            "name": "Project 4",
+            "description": "Dit is project 4"
+        },
+    "project5":
+        {
+            "name": "Project 5",
+            "description": "Dit is project 5"
         }
-    }
 }

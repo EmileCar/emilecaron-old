@@ -21,8 +21,11 @@ export const ActivityProvider = ({ children }) => {
         buttons: [
             {
                 text: "Download CV",
-                link: "/contact",
-                type: "primary"
+                type: "primary",
+                action: {
+                    type: "download",
+                    link: "/assets/files/CV_Emile_Caron.pdf"
+                }
             },
             {
                 text: "Contact",
@@ -50,7 +53,8 @@ export const ActivityProvider = ({ children }) => {
             {
                 text: "Download CV",
                 link: "/contact",
-                type: "primary"
+                type: "primary",
+
             },
             {
                 text: "Contact",
@@ -67,7 +71,7 @@ export const ActivityProvider = ({ children }) => {
     const [title, setTitle] = useState(null);
     const [description, setDescription] = useState(null);
     const [buttons, setButtons] = useState(null);
-    const [activityState, setActivityState] = useState("idle");
+    const [activityState, setActivityState] = useState("fadeIn");
 
     useEffect(() => {
         if(activityState === "fadeOut"){

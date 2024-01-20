@@ -7,6 +7,7 @@ import { ActivityProvider } from './contexts/ActivityContext';
 import 'primereact/resources/primereact.css';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/lara-light-blue/theme.css';
+import Projects from './components/projects/Projects';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />
       </Router>
