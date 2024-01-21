@@ -28,3 +28,10 @@
     margin: 2rem 0;
 }
 
+.chip{
+    background-color: var(--light-grey-color);
+    padding: 0.5rem 0.8rem;
+    border-radius: 10rem;
+    font-size: 0.8rem;
+    color: var(--dark-color);
+}

@@ -36,11 +36,11 @@ const QuickInfo = () => {
                 <div className="quickInfo__container__item">
                     <img className="quickInfo__container__item__icon" src={linkedinIcon} height={40} width={40}/>
                     <h3 className="quickInfo__container__item__title">Linkedin</h3>
-                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<span className="link">{linkTextParts[1]}</span>{linkTextParts[2]}</p>                </div>
+                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://www.linkedin.com/in/emile-caron-455730293/" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>                </div>
                 <div className="quickInfo__container__item">
                     <img className="quickInfo__container__item__icon" src={githubIcon} height={40} width={40}/>
                     <h3 className="quickInfo__container__item__title">Github</h3>
-                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<span className="link">{linkTextParts[1]}</span>{linkTextParts[2]}</p>                </div>
+                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://github.com/EmileCar" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>                </div>
             </div>
         </div>
     );

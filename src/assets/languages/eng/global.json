@@ -27,5 +27,15 @@
         "educationDetail": "Bachelor of Applied Computer Science",
         "educationSchool": "VIVES University",
         "link": "Link to profile $$here$$"
+    },
+    "projects": {
+        "webDev": {
+            "title": "My projects",
+            "description": "Here are some of the projects I've worked on. Click on a project to learn more about it."
+        },
+        "pianist": {
+            "title": "My personal playlist",
+            "description": "Here are some of my favorite songs I learned to play. Click on a song to listen to it."
+        }
     }
 }

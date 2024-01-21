@@ -27,5 +27,15 @@
         "educationDetail": "Bachelor toegepaste informatica",
         "educationSchool": "Hogeschool VIVES",
         "link": "Link $$hier$$ naar mijn profiel"
+    },
+    "projects": {
+        "webDev": {
+            "title": "Mijn projecten",
+            "description": "Hier zijn enkele projecten waaraan ik heb gewerkt. Klik op een project om er meer over te weten te komen."
+        },
+        "pianist": {
+            "title": "Mijn persoonlijke playlist",
+            "description": "Hier zijn enkele van mijn favoriete nummers die ik heb geleerd te spelen. Klik op een nummer om ernaar te luisteren."
+        }
     }
 }
