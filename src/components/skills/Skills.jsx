@@ -41,8 +41,8 @@ const Skills = () => {
                         <ul className="skills__container__item__list">
                             <li className="skills__container__item__list__item">Java Spring Boot</li>
                             <li className="skills__container__item__list__item">Node.js</li>
-                            <li className="skills__container__item__list__item">PHP Laravel (ook Full-Stack)</li>
-                            <li className="skills__container__item__list__item">ASP.Net (ook Full-Stack)</li>
+                            <li className="skills__container__item__list__item">PHP Laravel (+ Full-Stack)</li>
+                            <li className="skills__container__item__list__item">ASP.Net (+ Full-Stack)</li>
                         </ul>
                         <ul className="skills__icons">
                             <img src={javaIcon} height={iconHeight}/>

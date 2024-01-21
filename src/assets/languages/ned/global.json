@@ -6,11 +6,26 @@
     "hero": {
         "webDev": {
             "title": "Web Developer",
-            "description": "Ik ben een $$AGE$$-jarige student met veel interesse in informatica en gedreven om mijn vaardigheden en kennis verder op te bouwen in de wereld van software-ontwikkeling. Ik ben ervan overtuigd dat ik een waardevolle bijdrage kan leveren aan elk team of project door mijn passie voor programmeren en bereidheid om te leren en groeien."
+            "description": "Ik ben een $$AGE$$-jarige student met veel interesse in informatica en gedreven om mijn vaardigheden en kennis verder op te bouwen in de wereld van software-ontwikkeling. Ik ben ervan overtuigd dat ik een waardevolle bijdrage kan leveren aan elk team of project door mijn passie voor programmeren en bereidheid om te leren en groeien.",
+            "buttons": {
+                "cv": "Download CV",
+                "contact": "Contacteer mij"
+            }
         },
         "pianist": {
             "title": "Pianist",
-            "description": "Ik ben jouw pianist voor elke gelegenheid. Ik speel al 15 jaar piano en heb ervaring met het spelen van klassieke muziek, jazz, pop en filmmuziek. Ik heb ook ervaring met het begeleiden van koren en solisten. Ik ben beschikbaar voor concerten, evenementen, bruiloften, begrafenissen, ..."
+            "description": "Muziek is een belangrijke hobby voor mij. Het luisteren en spelen hebben altijd veel voor me betekend. Ik speel al piano sinds ik me kan herinneren, maar het werd pas serieus nadat ik muziekschool had gevolgd en zowel de accordeon als de basgitaar had geleerd. Ik ben zeker geen professional, maar ik speel met plezier voor mezelf en anderen.",
+            "buttons": {
+                "contact": "Contacteer mij"
+            }
         }
+    },
+    "quickInfo": {
+        "title": "Quick info",
+        "location": "Locatie",
+        "education": "Opleiding",
+        "educationDetail": "Bachelor toegepaste informatica",
+        "educationSchool": "Hogeschool VIVES",
+        "link": "Link $$hier$$ naar mijn profiel"
     }
 }

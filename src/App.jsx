@@ -7,7 +7,7 @@ import { ActivityProvider } from './contexts/ActivityContext';
 import 'primereact/resources/primereact.css';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/lara-light-blue/theme.css';
-import Projects from './components/projects/Projects';
+import Projects from './pages/Projects';
 
 function App() {
   return (

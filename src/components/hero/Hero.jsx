@@ -4,10 +4,12 @@ import { ActivityContext } from "../../contexts/ActivityContext";
 import { Link } from "react-router-dom";
 import Button from "../buttons/Button";
 import CV from "../../assets/EmileCaronCV.pdf";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const { img, title, description, buttons, activityState } = useContext(ActivityContext);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { t } = useTranslation("global");
 
   const handleImageLoad = () => {
     setImageLoaded(true);

@@ -20,7 +20,7 @@ export const ActivityProvider = ({ children }) => {
         description: "hero.webDev.description",
         buttons: [
             {
-                text: "Download CV",
+                text: "hero.webDev.buttons.cv",
                 type: "primary",
                 action: {
                     type: "download",
@@ -28,17 +28,9 @@ export const ActivityProvider = ({ children }) => {
                 }
             },
             {
-                text: "Contact",
+                text: "hero.webDev.buttons.contact",
                 link: "/contact",
                 type: "secondary"
-            }
-        ],
-        components: [
-            {
-                name: Skills
-            },
-            {
-                name: Projects
             }
         ]
     };
@@ -51,15 +43,10 @@ export const ActivityProvider = ({ children }) => {
         description:"hero.pianist.description",
         buttons: [
             {
-                text: "Download CV",
+                text: "hero.pianist.buttons.contact",
                 link: "/contact",
                 type: "primary",
 
-            },
-            {
-                text: "Contact",
-                link: "/contact",
-                type: "secondary"
             }
         ]
     };
@@ -76,7 +63,6 @@ export const ActivityProvider = ({ children }) => {
     useEffect(() => {
         if(activityState === "fadeOut"){
             setTimeout(() => {
-                console.log(activity)
                 setImg(activity.img);
                 setIcon(activity.icon);
                 setTitle(t(activity.title));
@@ -85,7 +71,14 @@ export const ActivityProvider = ({ children }) => {
                 const age = new Date().getFullYear() - 2002;
                 const ageRegex = /\$\$AGE\$\$/g;
                 setDescription(description.replace(ageRegex, age));
-                setButtons(activity.buttons);
+                const buttons = activity.buttons.map(button => {
+                    return {
+                        text: t(button.text),
+                        type: button.type,
+                        action: button.action
+                    }
+                });
+                setButtons(buttons);
                 setActivityState("fadeIn");
             } , 510);
         }
@@ -100,7 +93,14 @@ export const ActivityProvider = ({ children }) => {
         const age = new Date().getFullYear() - 2002;
         const ageRegex = /\$\$AGE\$\$/g;
         setDescription(description.replace(ageRegex, age));
-        setButtons(activity.buttons);
+        const buttons = activity.buttons.map(button => {
+            return {
+                text: t(button.text),
+                type: button.type,
+                action: button.action
+            }
+        });
+        setButtons(buttons);
     }, [t]);
 
     const toggleActivity = () => {
