@@ -10,11 +10,27 @@ const WebDevProjects = () => {
     const { id } = useContext(ActivityContext);
     const [projects, setProjects] = useState(projectsData);
 
+    const renderItemLink = (links) => {
+        if (links) {
+            const liveLink = links.find(link => link.name === 'Live');
+            const gitHubLink = links.find(link => link.name === 'GitHub');
+            if (liveLink && liveLink.url !== "private") {
+                return liveLink.url;
+            } else if (gitHubLink && gitHubLink.url !== "private") {
+                return gitHubLink.url;
+            }
+        }
+        return '';
+    }
+
     return (
         <>
-            {projects.projects.map((project, index) => {
+            {projects && projects.projects.map((project, index) => {
                 return (
-                    <div className="project__item" key={index}>
+                    <a
+                        {...(project.links && project.links.length > 0 && !project.links.some((link) => link.url === "private") ? { href: renderItemLink(project.links), target: "_blank" } : {})}
+                        className="project__item" key={index}
+                    >
                         <img className="project-img" src={project.image} alt={t(project.name)} />
                         <h3 className="project__title">{t(project.name)}</h3>
                         <div className="project__technologies">
@@ -24,20 +40,24 @@ const WebDevProjects = () => {
                                 );
                             })}
                         </div>
-                        <p className="project__assignee">{project.assignee}</p>
+                        <p className="project__description">{t(project.description)}</p>
                         <div className="project__links">
                             {project.links && project.links.map((link, index) => {
                                 return (
-                                    <a className="link" href={link.url} key={index}>
+                                    <a 
+                                        className={`link ${link.url === "private" ? "private" : ""}`} 
+                                        href={link.url} 
+                                        key={index}
+                                    >
                                         {link.name} link
                                     </a>
                                 );
                             })}
                         </div>
-                    </div>
+                    </a>
                 );
-            }, [])}
-        </>        
+            })}
+        </>
     );
 }
 

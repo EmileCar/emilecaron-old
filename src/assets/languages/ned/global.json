@@ -1,7 +1,8 @@
 {
     "header": {
         "home": "Home",
-        "about": "Over mij"
+        "about": "Over mij",
+        "projects": "Projecten"
     },
     "hero": {
         "webDev": {
@@ -36,6 +37,21 @@
         "pianist": {
             "title": "Mijn persoonlijke playlist",
             "description": "Hier zijn enkele van mijn favoriete nummers die ik heb geleerd te spelen. Klik op een nummer om ernaar te luisteren."
+        }
+    },
+    "about": {
+        "title": "About me",
+        "musicschool": {
+            "title": "Followed music school at academy SAMWD",
+            "description": "Ik heb de muziekschool (1e en 2e graad) gevolgd aan SAMWD van 2011 tot 2017. Ik begon met 6 jaar accordeon, maar later buiten muziekschool heb ik ook geleerd om piano en basgitaar te spelen."
+        },
+        "ksa": {
+            "title": "Leider bij KSA Oosterzele",
+            "description": "Na lang lid te zijn, ben ik sinds 2019 medeleiding bij KSA Oosterzele. In 2020 heb ik een animatorcursus voltooid met Expies van KSA."
+        },
+        "highschool": {
+            "title": "Afgestudeerd op Don Bosco Zwijnaarde",
+            "description": "Ik heb mijn middelbare schoolopleiding afgerond aan Don Bosco Zwijnaarde in 2020, waar ik Latijn-wetenschappen heb gevolgd."
         }
     }
 }

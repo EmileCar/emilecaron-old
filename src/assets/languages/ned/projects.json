@@ -1,23 +1,28 @@
 {
+    "general":
+        {
+            "personal_project": "Gemaakt voor persoonlijk gebruik",
+            "school_project": "Gemaakt voor een schoolproject"
+        },  
     "project1":
         {
-            "name": "Projectje 1",
-            "description": "Dit is project 1"
+            "name": "KSA Oosterzele website",
+            "description": "Een website vrijwillig gemaakt voor mijn jeugdbeweging"
         },
     "project2":
         {
-            "name": "Project 2",
-            "description": "Dit is project 2"
+            "name": "Ann De Winter website",
+            "description": "Een website vrijwillig gemaakt voor mijn mama"
         },
     "project3":
         {
-            "name": "Project 3",
-            "description": "Dit is project 3"
+            "name": "High Hopes",
+            "description": "Een persoonlijk project voor CSS-oefening"
         },
     "project4":
         {
-            "name": "Project 4",
-            "description": "Dit is project 4"
+            "name": "Eventplannr",
+            "description": "Een schoolproject voor het vak Cross-Platform Development"
         },
     "project5":
         {

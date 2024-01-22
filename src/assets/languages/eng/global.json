@@ -1,7 +1,8 @@
 {
     "header": {
         "home": "Home",
-        "about": "About me"
+        "about": "About me",
+        "projects": "Projects"
     },
     "hero": {
         "webDev": {
@@ -36,6 +37,21 @@
         "pianist": {
             "title": "My personal playlist",
             "description": "Here are some of my favorite songs I learned to play. Click on a song to listen to it."
+        }
+    },
+    "about": {
+        "title": "About me",
+        "musicschool": {
+            "title": "Followed music school at academy SAMWD",
+            "description": "I followed music school (primary & secondary) at SAMWD from 2011 to 2017. I started with 6 years of accordeon, but later outside of school I also learned to play the piano and bass guitar."
+        },
+        "ksa": {
+            "title": "Leader at KSA Oosterzele",
+            "description": "I have been a co-leader at KSA Oosterzele (our local youth movement) since 2019. In 2020, I completed an animator course with recognition from KSA Expies."
+        },
+        "highschool": {
+            "title": "Graduated at high school Don Bosco Zwijnaarde",
+            "description": "I completed my secondary education at Don Bosco Zwijnaarde in 2020, where I studied Latin-Sciences."
         }
     }
 }

@@ -10,7 +10,7 @@ import { ActivityContext } from "../../contexts/ActivityContext";
 const Header = ({ title }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
-  const { i18n } = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
   const [languages, setLanguages] = useState(["ned", "eng"]);
   const { icon, activityState, toggleActivity } = useContext(ActivityContext);
 
@@ -44,13 +44,13 @@ const Header = ({ title }) => {
               </Link>
             </li>
             <li className="menu__item">
-              <Link className="item__link" to="/media">
-                Media
+              <Link className="item__link" to="/about">
+                {t("header.about")}
               </Link>
             </li>
             <li className="menu__item">
               <Link className="item__link" to="/projects">
-                Projecten
+                {t("header.projects")}
               </Link>
             </li>
             <li className="menu__item">
