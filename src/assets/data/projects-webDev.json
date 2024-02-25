@@ -14,7 +14,7 @@
                     "icon": "link"
                 }
             ],
-            "image": "https://i.ibb.co/Yfcq0bf/image.png"
+            "image": "assets/images/webdevProjects/ksaoosterzele.jpg"
         },
         {
             "id": 2,
@@ -29,7 +29,7 @@
                     "icon": "link"
                 }
             ],
-            "image": "https://i.ibb.co/hY3sb76/Screenshot-2021-08-26-at-23-58-30.png"
+            "image": "assets/images/webdevProjects/anndewinter.jpg"
         },
         {
             "id": 3,
@@ -40,11 +40,11 @@
             "links": [
                 {
                     "name": "Live",
-                    "url": "private",
+                    "url": "https://emilecaron.be/highhopes",
                     "icon": "link"
                 }
             ],
-            "image": "https://i.ibb.co/HGwZsKK/Screenshot-2021-03-23-at-22-14-10.png"
+            "image": "assets/images/webdevProjects/highhopes.jpg"
         },
         {
             "id": 4,

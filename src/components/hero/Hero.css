@@ -22,6 +22,7 @@
     box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     z-index: 100;
+    margin-top: 2rem;
 }
 
 .hero-wrapper__image img{
@@ -80,6 +81,7 @@
     .hero-wrapper__image{
         max-width: 20rem;
         min-width: 320px;
+        margin-top: 0;
     }
 
 }

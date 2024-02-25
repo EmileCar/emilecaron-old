@@ -29,8 +29,8 @@ export const ActivityProvider = ({ children }) => {
             },
             {
                 text: "hero.webDev.buttons.contact",
-                link: "/contact",
-                type: "secondary"
+                type: "secondary",
+                link: "/contact"
             }
         ]
     };
@@ -75,7 +75,8 @@ export const ActivityProvider = ({ children }) => {
                     return {
                         text: t(button.text),
                         type: button.type,
-                        action: button.action
+                        action: button.action,
+                        link: button.link
                     }
                 });
                 setButtons(buttons);
@@ -97,7 +98,8 @@ export const ActivityProvider = ({ children }) => {
             return {
                 text: t(button.text),
                 type: button.type,
-                action: button.action
+                action: button.action,
+                link: button.link
             }
         });
         setButtons(buttons);
