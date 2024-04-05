@@ -2,12 +2,13 @@ import React from "react";
 import "./About.css";
 import { useTranslation } from "react-i18next";
 import AboutItem from "../../components/aboutItem/AboutItem";
+import DefaultLayout from "../../layout/DefaultLayout";
 
 const About = () => {
     const { t } = useTranslation("global")
 
     return (
-        <div className="page">
+        <DefaultLayout>
             <div className="section-general">
                 <h2 className="section-title">{t("about.title")}</h2>
                 <div className="section-title__border"></div>
@@ -48,7 +49,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </DefaultLayout>
     );
 }
 

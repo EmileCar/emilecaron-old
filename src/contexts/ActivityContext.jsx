@@ -4,8 +4,6 @@ import emileCaronPiano from '../assets/img/emilecaron_piano.jpg';
 import { useTranslation } from 'react-i18next';
 import PianoIcon from '../components/custom_icons/pianoIcon';
 import WebDevIcon from '../components/custom_icons/webDevIcon';
-import Projects from '../components/projects/WebDevProjects';
-import Skills from '../components/skills/Skills';
 
 export const ActivityContext = createContext();
 

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ActivityContext } from "../contexts/ActivityContext";
 import { useTranslation } from "react-i18next";
 import WebDevProjects from "../components/projects/WebDevProjects";
+import DefaultLayout from "../layout/DefaultLayout";
 
 const Projects = () => {
     const { id } = useContext(ActivityContext);
@@ -23,7 +24,7 @@ const Projects = () => {
     }, [id, t]);
 
     return (
-        <div className="page">
+        <DefaultLayout>
             <div className="section-general">
                 <h2 className="section-title">{title}</h2>
                 <div className="section-title__border"></div>
@@ -36,8 +37,7 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </DefaultLayout>
     );
 }
 
