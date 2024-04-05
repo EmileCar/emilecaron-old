@@ -6,7 +6,7 @@ import 'primereact/resources/primereact.css';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/lara-light-blue/theme.css';
 import Projects from './pages/Projects';
-import About from './pages/about/About';
+import About from './pages/About';
 import Contact from './pages/Contact';
 
 function App() {

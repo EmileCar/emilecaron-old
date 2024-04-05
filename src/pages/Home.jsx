@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { ActivityContext } from "../contexts/ActivityContext";
-import Hero from "../components/hero/Hero";
-import Skills from "../components/skills/Skills";
-import QuickInfo from "../components/quickinfo/QuickInfo";
+import Hero from "../sections/hero/Hero";
+import Skills from "../sections/skills/Skills";
+import QuickInfo from "../sections/quickinfo/QuickInfo";
 import DefaultLayout from "../layout/DefaultLayout";
 
 const Home = () => {
@@ -16,7 +16,6 @@ const Home = () => {
                 <>
                     <QuickInfo />
                     <Skills />
-                    
                 </>
             }
         </DefaultLayout>

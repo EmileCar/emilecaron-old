@@ -1,15 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
-import "./Projects.css";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ActivityContext } from "../../contexts/ActivityContext";
 import projectsData from '../../assets/data/projects-webDev.json';
-import gitHubIcon from '../../assets/img/icons/githubIcon.svg';
 
 const WebDevProjects = () => {
     const { t } = useTranslation("projects");
-    const { id } = useContext(ActivityContext);
-    const [projects, setProjects] = useState(projectsData);
-
+    const [projects] = useState(projectsData);
+    
     const renderItemLink = (links) => {
         if (links) {
             const liveLink = links.find(link => link.name === 'Live');

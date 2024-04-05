@@ -1,13 +1,14 @@
 import React from "react";
 import DefaultLayout from "../layout/DefaultLayout";
-import ProjectsSection from "../sections/projects/Projects";
+import AboutMe from "../sections/aboutMe/AboutMe";
 
-const Projects = () => {
+const About = () => {
+
     return (
         <DefaultLayout>
-            <ProjectsSection />
+            <AboutMe />
         </DefaultLayout>
     );
 }
 
-export default Projects;
+export default About;
