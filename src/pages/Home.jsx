@@ -1,25 +1,13 @@
-import React, { useContext } from "react";
-import { ActivityContext } from "../contexts/ActivityContext";
-import Hero from "../sections/hero/Hero";
-import Skills from "../sections/skills/Skills";
-import QuickInfo from "../sections/quickinfo/QuickInfo";
+import React from "react";
 import DefaultLayout from "../layout/DefaultLayout";
+import CaroneHero from "../sections/hero/CaroneHero";
 
 const Home = () => {
-    const { id } = useContext(ActivityContext);
-
     return (
         <DefaultLayout>
-            <Hero />
-            {
-                id === 'webDev' && 
-                <>
-                    <QuickInfo />
-                    <Skills />
-                </>
-            }
+            <CaroneHero />
         </DefaultLayout>
     );
-};
+}
 
 export default Home;

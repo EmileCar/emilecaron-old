@@ -38,7 +38,6 @@ const Hero = () => {
 										<Button type={button.type}>{button.text}</Button>
 									</a>
 								} else {
-									{console.log(button)}
 									return <Link key={index} to={button.link} className={"btn btn--" + button.type}>
 										<Button type={button.type}>{button.text}</Button>
 									</Link>
