@@ -18,7 +18,7 @@ const Hero = () => {
 	return (
 		<div className={`hero`}>
 			<div className={`hero-wrapper`}>
-				<div className={`hero-wrapper__image`} style={{ display: imageLoaded ? "grid" : "none" }}>
+				<div className={`hero-wrapper__image`} style={{opacity: imageLoaded ? 1 : 0}}>
 					<img
 						src={img}
 						alt={"Emile Caron " + title}

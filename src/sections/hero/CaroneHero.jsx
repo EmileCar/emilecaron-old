@@ -1,16 +1,40 @@
 import React, { useEffect, useState } from "react";
+import "./Hero.css";
 
 const CaroneHero = () => {
-    const highlightOptions = ["professionele", "snelleja", "goeie"];
-    const [currentOption, setCurrentOption] = useState(0);
+    const highlightOptions = ["professionele", "snelle", "goedkope"];
+    const [currentOptionIndex, setCurrentOptionIndex] = useState(0);
+    const [firstRender, setFirstRender] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentOption((currentOption + 1) % highlightOptions.length);
-        }, 3000);
+            const nextOptionIndex = (currentOptionIndex + 1) % highlightOptions.length;
+            setCurrentOptionIndex(nextOptionIndex);
+        }, 2500);
 
         return () => clearInterval(interval);
-    }, [currentOption, highlightOptions.length]);
+    }, [currentOptionIndex, highlightOptions.length]);
+
+    const renderHighlight = () => {
+        return (
+            <span className={`highlight`}>
+                {highlightOptions.map((option, index) => (
+                    <span 
+                        key={index}
+                        className={`${index === currentOptionIndex ? "highlighted" : ""} ${index === currentOptionIndex ? "fadeInVertical" : "fadeOutVertical"} ${firstRender && "firstRender"}`}
+                    >
+                        {option}
+                    </span>
+                ))}
+            </span>
+        );
+    };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setFirstRender(false);
+        }, 2000);
+    }, []);
 
     return (
         <section className="hero carone">
@@ -20,9 +44,7 @@ const CaroneHero = () => {
                 </h2>
                 <p className="caronehero__wrapper--text">
                     In nood van een{" "}
-                    <span className={`highlight ${currentOption !== 0 ? "fadeOutVertical" : ""}`}>
-                        {highlightOptions[currentOption]}
-                    </span>{" "}
+                    {renderHighlight()}
                     website?
                 </p>
             </div>
