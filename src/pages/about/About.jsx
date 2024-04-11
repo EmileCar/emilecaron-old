@@ -15,33 +15,8 @@ const About = () => {
                     <div className="about__container">
                         <AboutItem title={t("about.musicschool.title")} description={t("about.musicschool.description")} img={"assets/images/muziekschool.jpg"}/>
                         <AboutItem title={t("about.ksa.title")} description={t("about.ksa.description")} img={"assets/images/ksa.jpg"}/>
-                        <div className="about__item">
-                            <div className="about__item--content">
-                                <h3 className="about__container--title">{t("about.ksa.title")}</h3>
-                                <p className="about__container--text">{t("about.ksa.description")}</p>
-                            </div>
-                            <div className="about__item--img">
-                                <img src="test" alt="test" />
-                            </div>
-                        </div>
-                        <div className="about__item">
-                            <div className="about__item--content">
-                                <h3 className="about__container--title">{t("about.exchange.title")}</h3>
-                                <p className="about__container--text">{t("about.exchange.description")}</p>
-                            </div>
-                            <div className="about__item--img">
-                                <img src="test" alt="test" />
-                            </div>
-                        </div>
-                        <div className="about__item">
-                            <div className="about__item--content">
-                                <h3 className="about__container--title">{t("about.highschool.title")}</h3>
-                                <p className="about__container--text">{t("about.highschool.description")}</p>
-                            </div>
-                            <div className="about__item--img">
-                                <img src="test" alt="test" />
-                            </div>
-                        </div>
+                        <AboutItem title={t("about.exchange.title")} description={t("about.exchange.description")} img={"assets/images/brazil.jpg"}/>
+                        <AboutItem title={t("about.highschool.title")} description={t("about.highschool.description")} img={"assets/images/school.jpg"}/>
                         <div className="timeline">
                             <div className="timeline-line"></div>
                         </div>
