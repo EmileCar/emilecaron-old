@@ -22,23 +22,23 @@ const QuickInfo = () => {
         <Section title={t("quickInfo.title")}>
             <div className="quickInfo__container">
                 <div className="quickInfo__container__item">
-                    <img className="quickInfo__container__item__icon" src={locationIcon} height={40} width={40}/>
+                    <img className="quickInfo__container__item__icon" src={locationIcon} height={40} width={40} alt="location"/>
                     <h3 className="quickInfo__container__item__title">{t("quickInfo.location")}</h3>
                     <p className="quickInfo__container__item__text">Gent, Oost-Vlaanderen</p>
                 </div>
                 <div className="quickInfo__container__item subtext">
-                    <img className="quickInfo__container__item__icon" src={educationIcon} height={40} width={40}/>
+                    <img className="quickInfo__container__item__icon" src={educationIcon} height={40} width={40} alt="education"/>
                     <h3 className="quickInfo__container__item__title">{t("quickInfo.education")}</h3>
                     <p className="quickInfo__container__item__text">{t("quickInfo.educationDetail")}</p>
                     <p className="quickInfo__container__item__subtext">{t("quickInfo.educationSchool")}</p>
                 </div>
                 <div className="quickInfo__container__item">
-                    <img className="quickInfo__container__item__icon" src={linkedinIcon} height={40} width={40}/>
+                    <img className="quickInfo__container__item__icon" src={linkedinIcon} height={40} width={40} alt="linkedIn"/>
                     <h3 className="quickInfo__container__item__title">Linkedin</h3>
                     <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://www.linkedin.com/in/emile-caron-455730293/" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>
                 </div>
                 <div className="quickInfo__container__item">
-                    <img className="quickInfo__container__item__icon" src={githubIcon} height={40} width={40}/>
+                    <img className="quickInfo__container__item__icon" src={githubIcon} height={40} width={40} alt="github"/>
                     <h3 className="quickInfo__container__item__title">Github</h3>
                     <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://github.com/EmileCar" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>
                 </div>

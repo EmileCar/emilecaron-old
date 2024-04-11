@@ -8,7 +8,8 @@ const Home = () => {
         <DefaultLayout>
             <CaroneHero />
             <Alinea >
-                <p className="alinea-header">Tegenwoordig heeft vrijwel elk bedrijf een website nodig. Het zorgt voor professionaliteit, vindbaarheid en een sterke eerste indruk. Maar hoe begin je aan zo'n online project?  Daarom ben ik er om je te helpen.
+                <p className="alinea-header">
+                    Tegenwoordig heeft vrijwel elk bedrijf een website nodig. Het zorgt voor professionaliteit, vindbaarheid en een sterke eerste indruk. Maar hoe begin je aan zo'n online project?  Daarom ben ik er om je te helpen.
                 </p>
             </Alinea>
         </DefaultLayout>

@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import DefaultLayout from "../layout/DefaultLayout";
 
 const Contact = () => {
-    const [title, setTitle] = useState('Contact');
-
     return (
         <DefaultLayout>
             <div className="section-general">
-                <h2 className="section-title">{title}</h2>
+                <h2 className="section-title">Contact</h2>
                 <div className="section-title__border"></div>
                 <div className="section__content">
                     <p><strong>Email: </strong>caron.emile@telenet.be</p>

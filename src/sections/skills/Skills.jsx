@@ -13,7 +13,6 @@ import dockerIcon from "../../assets/img/icons/progLangs/docker.svg";
 import gitIcon from "../../assets/img/icons/progLangs/git.svg";
 import Section from "../../components/section/Section";
 
-
 const Skills = () => {
     const iconHeight = 35;
 
@@ -29,9 +28,9 @@ const Skills = () => {
                         <li className="skills__container__item__list__item">Angular</li>
                     </ul>
                     <ul className="skills__icons">
-                        <img src={jsIcon} height={iconHeight}/>
-                        <img src={reactIcon} height={iconHeight}/>
-                        <img src={angularIcon} height={iconHeight}/>
+                        <img src={jsIcon} alt="JavaScript" height={iconHeight}/>
+                        <img src={reactIcon} alt="React" height={iconHeight}/>
+                        <img src={angularIcon} alt="Angular" height={iconHeight}/>
                     </ul>
                 </div>
                 <div className="skills__container__item ">
@@ -43,10 +42,10 @@ const Skills = () => {
                         <li className="skills__container__item__list__item">ASP.Net (+ Full-Stack)</li>
                     </ul>
                     <ul className="skills__icons">
-                        <img src={javaIcon} height={iconHeight}/>
-                        <img src={phpIcon} height={iconHeight}/>
-                        <img src={nodeIcon} height={iconHeight}/>
-                        <img src={csharpIcon} height={iconHeight}/>
+                        <img src={javaIcon} alt="Java" height={iconHeight}/>
+                        <img src={phpIcon} alt="PHP" height={iconHeight}/>
+                        <img src={nodeIcon} alt="Node.js" height={iconHeight}/>
+                        <img src={csharpIcon} alt="C#" height={iconHeight}/>
                     </ul>
                 </div>
                 <div className="skills__container__item ">
@@ -57,9 +56,9 @@ const Skills = () => {
                         <li className="skills__container__item__list__item">React Native</li>
                     </ul>
                     <ul className="skills__icons">
-                        <img src={kotlinIcon} height={iconHeight}/>
-                        <img src={swiftIcon} height={iconHeight}/>
-                        <img src={reactIcon} height={iconHeight}/>
+                        <img src={kotlinIcon} alt="Kotlin" height={iconHeight}/>
+                        <img src={swiftIcon} alt="Swift" height={iconHeight}/>
+                        <img src={reactIcon} alt="React" height={iconHeight}/>
                     </ul>
                 </div>
                 <div className="skills__container__item ">
@@ -71,8 +70,8 @@ const Skills = () => {
                         <li className="skills__container__item__list__item">Agile / SCRUM methode</li>
                     </ul>
                     <ul className="skills__icons">
-                        <img src={gitIcon} height={iconHeight}/>
-                        <img src={dockerIcon} height={iconHeight}/>
+                        <img src={gitIcon} alt="Git" height={iconHeight}/>
+                        <img src={dockerIcon} alt="Docker" height={iconHeight}/>
                     </ul>
                 </div>
             </div>
