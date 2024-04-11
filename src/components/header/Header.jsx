@@ -7,11 +7,11 @@ import { SelectButton } from 'primereact/selectbutton';
 import { changeLanguage } from "i18next";
 import { ActivityContext } from "../../contexts/ActivityContext";
 
-const Header = ({ title }) => {
+const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
   const { t, i18n } = useTranslation("global");
-  const [languages, setLanguages] = useState(["ned", "eng"]);
+  const [languages] = useState(["ned", "eng"]);
   const { icon, activityState, toggleActivity } = useContext(ActivityContext);
 
   useEffect(() => {
@@ -19,7 +19,6 @@ const Header = ({ title }) => {
   }, [location]);
 
   const handleClickNavToggle = () => {
-    console.log(isNavOpen)
     setIsNavOpen(!isNavOpen);
   };
 
@@ -44,7 +43,7 @@ const Header = ({ title }) => {
               </Link>
             </li>
             <li className="menu__item">
-              <Link className="item__link" to="/about">
+              <Link className="item__link" to="/me">
                 {t("header.about")}
               </Link>
             </li>

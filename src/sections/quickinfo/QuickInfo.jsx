@@ -5,6 +5,7 @@ import educationIcon from "../../assets/img/icons/educationIcon.svg";
 import linkedinIcon from "../../assets/img/icons/linkedinIcon.svg";
 import githubIcon from "../../assets/img/icons/githubIcon.svg";
 import { useTranslation } from "react-i18next";
+import Section from "../../components/section/Section";
 
 
 const QuickInfo = () => {
@@ -18,9 +19,7 @@ const QuickInfo = () => {
     }, [t]);
 
     return (
-        <div className="section-general">
-            <h2 className="section-title">{t("quickInfo.title")}</h2>
-            <div className="section-title__border"></div>
+        <Section title={t("quickInfo.title")}>
             <div className="quickInfo__container">
                 <div className="quickInfo__container__item">
                     <img className="quickInfo__container__item__icon" src={locationIcon} height={40} width={40}/>
@@ -36,13 +35,15 @@ const QuickInfo = () => {
                 <div className="quickInfo__container__item">
                     <img className="quickInfo__container__item__icon" src={linkedinIcon} height={40} width={40}/>
                     <h3 className="quickInfo__container__item__title">Linkedin</h3>
-                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://www.linkedin.com/in/emile-caron-455730293/" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>                </div>
+                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://www.linkedin.com/in/emile-caron-455730293/" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>
+                </div>
                 <div className="quickInfo__container__item">
                     <img className="quickInfo__container__item__icon" src={githubIcon} height={40} width={40}/>
                     <h3 className="quickInfo__container__item__title">Github</h3>
-                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://github.com/EmileCar" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>                </div>
+                    <p className="quickInfo__container__item__text">{linkTextParts[0]}<a target="_blank" href="https://github.com/EmileCar" className="link">{linkTextParts[1]}</a>{linkTextParts[2]}</p>
+                </div>
             </div>
-        </div>
+        </Section>
     );
 }
 

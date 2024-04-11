@@ -79,8 +79,7 @@
     }
 
     .hero-wrapper__image{
-        max-width: 20rem;
-        min-width: 320px;
+        width: 320px;
         margin-top: 0;
     }
 
@@ -125,6 +124,28 @@
     opacity: 1;
     }
 }
+
+@keyframes fadeInVertical {
+    from {
+        opacity: 0;
+        transform: translateY(1.2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutVertical {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-1.2rem);
+    }
+}
   
 .fadeOut {
     animation: fadeOut 0.5s ease-in-out forwards;
@@ -142,4 +163,69 @@
     animation: fadeInImg 0.5s ease-in-out forwards;
 }
 
+.fadeInVertical {
+    animation: fadeInVertical 0.5s ease-in-out forwards;
+}
 
+.fadeOutVertical {
+    animation: fadeOutVertical 0.5s ease-in-out forwards;
+}
+
+/* CARONE HERO */
+@media screen and (min-width: 800px){
+    .hero.carone{
+        height: 40vh;
+    }
+}
+
+.caronehero__wrapper{
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.caronehero__wrapper--title{
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    gap: 1rem;
+}
+
+.caronehero__wrapper--title .code{
+    color: var(--grey-color);
+    text-transform: lowercase;
+    font-weight: normal;
+    font-size: 5rem;
+    align-self: center;
+}
+
+.caronehero__wrapper--text{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.caronehero__wrapper--text .highlight{
+    color: var(--primary-color);
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.caronehero__wrapper--text .highlight span{
+    position: absolute;
+}
+
+.highlighted {
+    opacity: 1;
+}
+
+.firstRender:not(.highlighted) {
+    visibility: hidden;
+}

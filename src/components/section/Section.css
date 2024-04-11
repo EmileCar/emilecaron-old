@@ -1,0 +1,21 @@
+.section-general{
+    padding: 2rem 0;
+}
+
+.section-title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-title__border{
+    height: 0.25rem;
+    width: 7rem;
+    background: linear-gradient(90deg, rgba(0,124,237,1) 0%, rgba(0,124,237,1) 37%, var(--light-grey-color) 37%);
+    border-radius: 10rem;
+    margin-bottom: 1rem;
+}
+
+.section__content{
+    margin: 2rem 0;
+}

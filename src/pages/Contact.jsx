@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import DefaultLayout from "../layout/DefaultLayout";
 
 const Contact = () => {
     const [title, setTitle] = useState('Contact');
 
     return (
-        <div className="page">
+        <DefaultLayout>
             <div className="section-general">
                 <h2 className="section-title">{title}</h2>
                 <div className="section-title__border"></div>
@@ -13,7 +14,7 @@ const Contact = () => {
                     <p><strong>Phone: </strong>+32 495 66 76 93</p>
                 </div>
             </div>
-        </div>
+        </DefaultLayout>
     );
 }
 
