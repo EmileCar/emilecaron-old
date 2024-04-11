@@ -1,3 +1,16 @@
+.alineas{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.alinea{
+
+}
 .alinea-header{
     font-size: larger;
+    text-align: center;
+}
+.alinea-subtitle{
+    font-size: larger;
+    font-weight: bold
 }
