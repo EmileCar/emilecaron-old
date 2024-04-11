@@ -8,7 +8,7 @@ const AboutItem = ({ title, description, img }) => {
                 <p className="about__container--text">{description}</p>
             </div>
             <div className="about__item--img">
-                <img src={img} alt="test" />
+                <img src={img} alt={`Emile Caron ${title}`} />
             </div>
         </div>
     );
