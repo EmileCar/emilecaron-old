@@ -1,7 +1,7 @@
 .alineas{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
 }
 .alinea{
 
@@ -12,5 +12,6 @@
 }
 .alinea-subtitle{
     font-size: larger;
-    font-weight: bold
+    font-weight: bold;
+    margin-bottom: 1rem;
 }

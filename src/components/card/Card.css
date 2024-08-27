@@ -1,0 +1,44 @@
+.card{
+    padding: 1rem;
+    background-color: var(--white-color);
+    border-radius: 1.2rem;
+    position: relative;
+    border: 2px solid var(--light-grey-color);
+}
+
+.card-title{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-icons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    pointer-events: none;
+}
+
+
+
+@media screen and (max-width: 950px){
+    .skills__icons{
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .skills__icons{
+        transform: scale(1);
+    }    
+}
+
+@media screen and (max-width: 480px){
+    .skills__icons{
+        position: relative;
+        transform: scale(1);
+    }    
+}

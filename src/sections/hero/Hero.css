@@ -175,6 +175,7 @@
 @media screen and (min-width: 800px){
     .hero.carone{
         height: 40vh;
+        margin-bottom: 3rem;
     }
 }
 

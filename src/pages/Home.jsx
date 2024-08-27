@@ -22,6 +22,15 @@ const Home = () => {
                     </h2>
                     <Diensten />
                 </Alinea>
+                <Alinea>
+                    <h2 className="alinea-subtitle">
+                        Wat moet dat kosten?
+                    </h2>
+                    <p>
+                        Wanneer mensen online prijzen voor websites opzoeken, beseffen ze vaak dat het een behoorlijke investering kan zijn, waardoor ze soms afhaken. 
+                        Ik wil dat vermijden door mijn diensten zo betaalbaar mogelijk aan te bieden. Betekent dit dat mijn websites qua kwaliteit tekortschieten? Absoluut niet. Ik ben ervaren in mijn eigen werkwijze waarmee ik snel en efficiënt nieuwe websites kan lanceren.
+                    </p>
+                </Alinea>
             </div>
         </DefaultLayout>
     );

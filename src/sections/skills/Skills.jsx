@@ -12,6 +12,7 @@ import csharpIcon from "../../assets/img/icons/progLangs/csharp.svg";
 import dockerIcon from "../../assets/img/icons/progLangs/docker.svg";
 import gitIcon from "../../assets/img/icons/progLangs/git.svg";
 import Section from "../../components/section/Section";
+import Card from "../../components/card/Card";
 
 const Skills = () => {
     const iconHeight = 35;
@@ -19,61 +20,53 @@ const Skills = () => {
     return (
         <Section title="Skills">
             <div className="skills__container">
-                <div className="skills__container__item">
-                    <h3 className="skills__container__item__title">Front-end</h3>
+                <Card title="Front-end" icons={[
+                    { src: jsIcon, alt: "JavaScript", height: iconHeight },
+                    { src: reactIcon, alt: "React", height: iconHeight },
+                    { src: angularIcon, alt: "Angular", height: iconHeight }
+                ]}>
                     <ul className="skills__container__item__list">
                         <li className="skills__container__item__list__item">HTML & CSS</li>
                         <li className="skills__container__item__list__item">JavaScript</li>
                         <li className="skills__container__item__list__item">React</li>
                         <li className="skills__container__item__list__item">Angular</li>
                     </ul>
-                    <ul className="skills__icons">
-                        <img src={jsIcon} alt="JavaScript" height={iconHeight}/>
-                        <img src={reactIcon} alt="React" height={iconHeight}/>
-                        <img src={angularIcon} alt="Angular" height={iconHeight}/>
-                    </ul>
-                </div>
-                <div className="skills__container__item ">
-                    <h3 className="skills__container__item__title">Back-end</h3>
+                </Card>
+                <Card title="Back-end" icons={[
+                    { src: javaIcon, alt: "Java", height: iconHeight },
+                    { src: phpIcon, alt: "PHP", height: iconHeight },
+                    { src: nodeIcon, alt: "Node.js", height: iconHeight },
+                    { src: csharpIcon, alt: "C#", height: iconHeight }
+                ]}>                        
                     <ul className="skills__container__item__list">
                         <li className="skills__container__item__list__item">Java Spring Boot</li>
                         <li className="skills__container__item__list__item">Node.js</li>
                         <li className="skills__container__item__list__item">PHP Laravel (+ Full-Stack)</li>
                         <li className="skills__container__item__list__item">ASP.Net (+ Full-Stack)</li>
                     </ul>
-                    <ul className="skills__icons">
-                        <img src={javaIcon} alt="Java" height={iconHeight}/>
-                        <img src={phpIcon} alt="PHP" height={iconHeight}/>
-                        <img src={nodeIcon} alt="Node.js" height={iconHeight}/>
-                        <img src={csharpIcon} alt="C#" height={iconHeight}/>
-                    </ul>
-                </div>
-                <div className="skills__container__item ">
-                    <h3 className="skills__container__item__title">Mobile</h3>
+                </Card>
+                <Card title="Mobile" icons={[
+                    { src: kotlinIcon, alt: "Kotlin", height: iconHeight },
+                    { src: swiftIcon, alt: "Swift", height: iconHeight },
+                    { src: reactIcon, alt: "React", height: iconHeight }
+                ]}>
                     <ul className="skills__container__item__list">
                         <li className="skills__container__item__list__item">Android: Kotlin</li>
                         <li className="skills__container__item__list__item">iOS: Swift</li>
                         <li className="skills__container__item__list__item">React Native</li>
                     </ul>
-                    <ul className="skills__icons">
-                        <img src={kotlinIcon} alt="Kotlin" height={iconHeight}/>
-                        <img src={swiftIcon} alt="Swift" height={iconHeight}/>
-                        <img src={reactIcon} alt="React" height={iconHeight}/>
-                    </ul>
-                </div>
-                <div className="skills__container__item ">
-                    <h3 className="skills__container__item__title">IT Infrastructure</h3>
+                </Card>
+                <Card title="IT Infrastructure" icons={[
+                    { src: gitIcon, alt: "Git", height: iconHeight },
+                    { src: dockerIcon, alt: "Docker", height: iconHeight }
+                ]}>
                     <ul className="skills__container__item__list">
                         <li className="skills__container__item__list__item">Azure Portal / Devops</li>
                         <li className="skills__container__item__list__item">Git</li>
                         <li className="skills__container__item__list__item">Docker</li>
                         <li className="skills__container__item__list__item">Agile / SCRUM methode</li>
                     </ul>
-                    <ul className="skills__icons">
-                        <img src={gitIcon} alt="Git" height={iconHeight}/>
-                        <img src={dockerIcon} alt="Docker" height={iconHeight}/>
-                    </ul>
-                </div>
+                </Card>
             </div>
         </Section>
     );
