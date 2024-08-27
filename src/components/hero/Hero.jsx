@@ -36,7 +36,7 @@ const Hero = () => {
             {buttons &&
               buttons.map((button, index) => {
                 if(button.action && button.action.type === "download"){
-                  return <a key={index} href={CV} download="Emile Caron CV 2023">
+                  return <a key={index} href={CV} download="Emile Caron CV 2024">
                     <Button type={button.type}>{button.text}</Button>
                   </a>
                 } else {
