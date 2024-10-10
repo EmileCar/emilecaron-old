@@ -6,23 +6,6 @@ require_once __DIR__ . '/../responses/ErrorResponse.php';
 
 class AccountController extends Controller {
 
-	// public function validate_credentials() {
-	// 	$requestData = json_decode(file_get_contents('php://input'), true);
-
-	// 	if (empty($requestData["username"]) || empty($requestData["password"])) {
-	// 		ErrorResponse::exitWithError(400, "Username and password are required.");
-	// 	}
-
-	// 	$account = Account::where('username', $requestData["username"])->where('password', $requestData["password"])->first();
-
-	// 	if (empty($account)) {
-	// 		ErrorResponse::exitWithError(401, "De inloggegevens zijn onjuist.");
-	// 	}
-
-	// 	$_SESSION["account_ksaoosterzele"] = $account->id;
-	// 	exit();
-	// }
-
 	public function get_account() {
 		$account = Account::is_authenticated();
 		unset($account->password);
