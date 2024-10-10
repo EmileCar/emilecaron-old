@@ -12,7 +12,8 @@ set_error_handler(function($errno, $errstr, $errfile, $errline) {
 });
 
 $allowedOrigins = [
-    // To be filled in
+    'https://emilecaron.be',
+    'http://localhost:3001',
 ];
 
 if(!empty($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins))

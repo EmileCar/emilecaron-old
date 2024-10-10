@@ -24,16 +24,35 @@ class AccountController extends Controller {
 	// }
 
 	public function get_account() {
-		echo 'YEEEY';
 		$account = Account::is_authenticated();
-		$accountResponse = new AccountResponse($account);
+		unset($account->password);
+		unset($account->created_at);
+		unset($account->updated_at);
+		unset($account->id);
 
-		exit(json_encode($accountResponse->toArray()));
+		exit(json_encode($account->toArray()));
 	}
 
-	public function remove_credentials() {
-		if(!empty($_SESSION["account_ksaoosterzele"])){
-			unset($_SESSION["account_ksaoosterzele"]);
+	public function login() {
+		$requestData = json_decode(file_get_contents('php://input'), true);
+
+		if (empty($requestData["username"]) || empty($requestData["password"])) {
+			ErrorResponse::exitWithError(400, "Username and password are required.");
+		}
+
+		$account = Account::where('username', $requestData["username"])->where('password', $requestData["password"])->first();
+
+		if (empty($account)) {
+			ErrorResponse::exitWithError(401, "Invalid credentials.");
+		}
+
+		$_SESSION["account_caroneCMS"] = $account->id;
+		exit();
+	}
+
+	public function signout() {
+		if(!empty($_SESSION["account_caroneCMS"])){
+			unset($_SESSION["account_caroneCMS"]);
 			exit(json_encode("Session removed"));
 		}
 	}

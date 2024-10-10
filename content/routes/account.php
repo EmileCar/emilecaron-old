@@ -6,4 +6,16 @@ $accountRoutes = [
             'GET' => 'get_account',
         )
     ),
+    'login' => array(
+        'controller' => 'Account',
+        'methods' => array(
+            'POST' => 'login',
+        )
+    ),
+    'signout' => array(
+        'controller' => 'Account',
+        'methods' => array(
+            'POST' => 'signout',
+        )
+    ),
 ];

@@ -1,12 +1,13 @@
 <?php
 require_once 'pages.php';
+require_once 'account.php';
 
 // Als er geen pagina is opgegeven, zet de page op index
 if(empty($_GET['page'])) {
     $_GET['page'] = 'index';
 }
 
-$allowedRoutes = array_merge($pagesRoutes);
+$allowedRoutes = array_merge($pagesRoutes, $accountRoutes);
 
 require_once __DIR__ . '/../responses/ErrorResponse.php';
 
