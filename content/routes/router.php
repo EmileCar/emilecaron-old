@@ -1,5 +1,6 @@
 <?php
 require_once 'pages.php';
+require_once 'components.php';
 require_once 'account.php';
 
 // Als er geen pagina is opgegeven, zet de page op index
@@ -7,7 +8,7 @@ if(empty($_GET['action'])) {
     $_GET['action'] = 'index';
 }
 
-$allowedRoutes = array_merge($pagesRoutes, $accountRoutes);
+$allowedRoutes = array_merge($pagesRoutes, $accountRoutes, $componentsRoutes);
 
 require_once __DIR__ . '/../responses/ErrorResponse.php';
 

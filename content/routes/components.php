@@ -1,15 +1,15 @@
 <?php
-$pagesRoutes = [
-    'pages' => array(
+$componentsRoutes = [
+    'components' => array(
         'controller' => 'File',
         'methods' => array(
-            'GET' => 'get_pages',
+            'GET' => 'get_components',
         )
     ),
-    'page' => array(
+    'component' => array(
         'controller' => 'File',
         'methods' => array(
-            'GET' => 'get_page',
+            'GET' => 'get_component',
         )
     ),
 ];
