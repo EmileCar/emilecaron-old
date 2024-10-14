@@ -10,6 +10,7 @@ $pagesRoutes = [
         'controller' => 'File',
         'methods' => array(
             'GET' => 'get_page',
+            'POST' => 'create_page',
         )
     ),
 ];

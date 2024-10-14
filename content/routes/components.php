@@ -10,6 +10,7 @@ $componentsRoutes = [
         'controller' => 'File',
         'methods' => array(
             'GET' => 'get_component',
+            'POST' => 'create_component',
         )
     ),
 ];

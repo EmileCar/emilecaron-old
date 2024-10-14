@@ -37,6 +37,28 @@ class FileController extends Controller {
         exit(json_encode($component));
     }
 
+    public function create_component() {
+        if (!isset($_GET['name'])) {
+            ErrorResponse::exitWithError(400, "Component name is required.");
+        }
+
+        $name = $_GET['name'];
+
+        $response = self::create_file($this->componentsDir, $name, null);
+        exit(json_encode($response));
+    }
+
+    public function create_page() {
+        if (!isset($_GET['name'])) {
+            ErrorResponse::exitWithError(400, "Page name is required.");
+        }
+
+        $name = $_GET['name'];
+
+        $response = self::create_file($this->pagesDir, $name, null);
+        exit(json_encode($response));
+    }
+
     private static function get_files($dir) {
         $_files = scandir($dir);
         $files = [];
@@ -82,6 +104,27 @@ class FileController extends Controller {
         } else {
             ErrorResponse::exitWithError(404, "File not found.");
         }
+    }
+
+    private static function create_file($dir, $name, $content) {
+        $filePath = $dir . $name . '.json';
+
+        if (file_exists($filePath)) {
+            ErrorResponse::exitWithError(400, "File already exists.");
+        }
+
+        $file = fopen($filePath, "w");
+
+        if ($content === null) {
+            $content = [];
+        }
+
+        fwrite($file, json_encode($content));
+        fclose($file);
+
+        return [
+            'message' => 'File created successfully.'
+        ];
     }
 }
 
